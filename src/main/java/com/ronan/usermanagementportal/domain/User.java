@@ -2,6 +2,7 @@ package com.ronan.usermanagementportal.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -49,8 +50,8 @@ public class User implements Serializable {
     private Date joinDate;
 
 
-    private String[] roles; // ROLE_USER{ read, edit }, ROLE_ADMIN{ delete }
-    private String[] authorities;
+    private List<String> roles; // ROLE_USER{ read, edit }, ROLE_ADMIN{ delete }
+    private List<String> authorities;
     
     @Column(name = "is_active")
     private boolean isActive;
